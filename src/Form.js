@@ -5,6 +5,7 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
+import TextField from '@mui/material/TextField';
 
 const defaultValues = {
     name: "",
@@ -29,6 +30,16 @@ const Form = () => {
     return (
         <form onSubmit={handleSubmit}>
             <Grid container alignItems="center" justify="center" direction="column">
+                <Grid item>
+                    <TextField
+                        id="name-input"
+                        name="name"
+                        label="Name"
+                        type="text"
+                        value={formValues.name}
+                        onChange={handleInputChange}
+                    />
+                </Grid>
                 <Grid item>
                     <TextField
                         id="name-input"
